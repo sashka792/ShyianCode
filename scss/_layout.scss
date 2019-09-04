@@ -42,13 +42,24 @@ body, html {
 .ba-text-center {
 	text-align: center;
 }
-
+.mr-auto {
+	margin-right: auto;
+}
+.ml-auto{
+	margin-left: auto;
+}
+.d-flex {
+	display: flex;
+}
 /* Absolute centering */
 
 .ba-relative {
 	position: relative;
 }
-
+.ba-absolute {
+	display: block;
+	position: absolute;
+}
 .ba-absolute-center {
 	display: block;
 	position: absolute;
