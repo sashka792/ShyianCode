@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,700&display=swap');
 @import '_normalize';
 @import '_layout';
 
@@ -24,6 +24,37 @@ h1,h2,h3,h4,h5,h6 {
 h1,h2,h3,h4,h5,h6,p {
 	margin: 0
 }
+.section-title, h3{
+	font-family: 'Oswald', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+	align-items: center;
+	color: #787878;
+	position: relative;
+	left: 4%;
+}
+
+.section-title:after{
+	content: '';
+	position: absolute;
+	bottom: 5%;
+	left: -3%;
+	// right: 0;
+	// top: 0;
+	width: 100px;
+	height: 15px;
+	background: #F0B163;
+	z-index: -1;
+}
+.text, p {
+	font-family: 'Lato',sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 30px;
+	color: rgba(55, 57, 64, 0.75);
+}
 a,
 input[type="submit"],
 input[type="button"],
@@ -37,16 +68,63 @@ button,
 	font-weight: bold;
 	display: inline-block;
 	background: rgba(255, 255, 255, 0.4);
-	border: 4px solid #F0B163;
+	border: 2px solid #F0B163;
+	border: none;
+	outline: none;
+	background: transparent;
+	letter-spacing: 0.25em;
+	padding: 9px 36px; 
+	line-height: 2;
+	position: relative;
+	cursor: pointer;
+	// text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+	overflow: hidden;
+	transition: all .5s;
 }
 
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover,
 .ba-button:hover{
-
+	color: white;
 }
-
+  /* //// Default effect: Slide from Top  //// */
+  .ba-button:before,
+  .ba-button:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	border: 4px solid #F0B163;
+	background: #F0B163; /* onhover background color */
+	z-index: -1;
+	transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+	transition: all .5s;
+  }
+ 
+  .ba-button:before{
+	background: rgba(255, 255, 255, 0.4); /* button default background color */
+	z-index: -2;
+	transform: translate3D(0,0,0);
+  }
+  
+  .ba-button:hover:after{
+	transform: translate3D(0,0,0);
+	transition: all .5s;
+  }
+  
+  /* //// Slide Left  //// */
+  .slideleft:after{
+	top: 0;
+	z-index: -1;
+	transform: translate3D(-101%,0,0);
+  }
+  .slideleft:hover:after{
+	transition: all .5s;
+  }
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -69,8 +147,8 @@ select:focus {
 textarea {
 
 }
-.no-margin {
-	margin: 0!important;
+header {
+	// height: 100vh;
 }
 .navigation{
 	transform: rotate(-90deg);
@@ -147,7 +225,7 @@ textarea {
   }
 /*---------- end of menu link animation ----------*/
 .logo {
-	width: 108px;
+	width: 80px;
 	margin-top: 90px;
 }
 
@@ -158,8 +236,9 @@ textarea {
 		font-family: "Oswald";
 		font-weight: 700;
 		font-size: 72px;
+		margin-bottom: 40px;
 		color: #ffffff;
-		// -webkit-text-stroke: 1px solid #D1D4D7;
+		text-shadow: #333333 -1px 1px 2px;
 	}
 	.offer-name {
 		font-weight: 700;
@@ -192,65 +271,9 @@ textarea {
 
 .offer-btn{
 	margin-left: 3px;
-	outline: none;
-	background: transparent;
-	border: none;
-	letter-spacing: 0.25em;
-	padding: 9px 36px; 
-	line-height: 2;
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	// text-decoration: none; /* remove underline if using A instead of BUTTON tag */
-	overflow: hidden;
-	transition: all .5s;
-  }
-  
-  /* //// Default effect: Slide from Top  //// */
-  
-  .offer-btn:before,
-  .offer-btn:after{
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	height: 100%;
-	border: 4px solid #F0B163;
-	background: #F0B163; /* onhover background color */
-	z-index: -1;
-	transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
-	transition: all .5s;
-  }
-  
-  .offer-btn:before{
-	background: rgba(255, 255, 255, 0.4); /* button default background color */
-	z-index: -2;
-	transform: translate3D(0,0,0);
-  }
-  
-  .offer-btn:hover{
-	  color: white;
-  }
-  
-  .offer-btn:hover:after{
-	transform: translate3D(0,0,0);
-	transition: all .5s;
-  }
-  
-  /* //// Slide Left  //// */
-  .slideleft:after{
-	top: 0;
-	z-index: -1;
-	transform: translate3D(-101%,0,0);
-  }
-  
-  .slideleft:hover:after{
-	transition: all .5s;
-  }
+}
 
-  .wrap-social {
+.wrap-social {
 	margin-top: 30px;
 	margin-left: 5px;
 	i {
@@ -266,7 +289,7 @@ textarea {
 	// position: fixed;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: 100px;
+	margin-top: 70px;
 	color: #373940;
 	.scroll-svg{
 		padding-right: 20px;
@@ -336,4 +359,32 @@ textarea {
 	  -o-transform: translateY(-15px);
 	  transform: translateY(-15px);
 	}
+  }
+
+  .about {
+	  margin: 100px 0;
+  }
+  .about-wrap-text{
+	  padding: 30px 0px 0 30px;
+	  .about-text{
+		  margin-bottom: 30px;
+		  &:last-child{
+			  margin-bottom: 0;
+		  }
+	  }
+  }
+
+  .resume-btn{
+	  padding: 10px 15px;
+	  line-height: 17px;
+	  letter-spacing: 0;
+	  margin-top: 65px;
+	  margin-left: 25%;
+	  i{
+		  padding-left: 15px;
+	  }
+  }
+
+  .my-photo {
+	  position: absolute;
   }
