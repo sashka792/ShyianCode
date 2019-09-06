@@ -1,0 +1,38 @@
+.skills-title{
+    margin-bottom: 10px;
+}
+.col-skill{
+    flex-direction: column;
+}
+
+.skill-wrap{
+    position: relative;
+    margin: 0 auto;
+}
+
+.skills svg {
+    display: block;
+    max-width: 150px;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.skill-progress {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 0px;
+    margin: 0px;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    font-size: 2rem;
+}
+
+.skill-name{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}

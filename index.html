@@ -12,43 +12,62 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- WOW js -->
 	<link rel="stylesheet" href="css/style.css" />
 
 </head>
 
 <body>
 	<header>
-		<div class="ba-container">
-			<div class="ba-row">
-				<div class="ba-col-12">
-					<nav class="navigation">
-						<ul class="menu">
-							<li class="menu-item"><a href="#" class="nav-link">CONTACTS</a></li>
-							<li class="menu-item"><a href="#" class="nav-link">TESTIMONIALS</a></li>
-							<li class="menu-item"><a href="#" class="nav-link">CASES</a></li>
-							<li class="menu-item"><a href="#" class="nav-link">MY SERVICES</a></li>
-							<li class="menu-item"><a href="#" class="nav-link">ABOUT ME</a></li>
-							<li class="menu-item"><a href="#" class="nav-link">HOME</a></li>
-						</ul>
-						<!-- /.menu -->
-					</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#">CONTACTS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">TESTIMONIALS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">CASES</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">MY SERVICES</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">ABOUT ME</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">HOME</a>
+						</li>
+					</ul>
 					<!-- /.navigation -->
 				</div>
 			</div>
-			<div class="ba-row no-margin">
-				<div class="ba-col-7 ba-relative">
+		</div>
+		<div class="container">
+			<div class="row no-margin">
+				<div class="col-lg-7 col-md-6 ba-relative">
 					<img src="img/main.jpg" alt="" class="offer-bg">
+					<div class="wrap-name-mobile d-lg-none d-sm-block">
+						<p class="name-mobile">ALEX</p>
+						<p class="name-mobile">SHYIAN</p>
+					</div>
+				</div>
+				<!-- /.col-lg-lg-6 -->
+				<div class="col-lg-5 col-md-6 offer-info">
+					<a href="/">
+						<img src="img/logo.svg" class="logo d-flex ml-auto" alt="">
+					</a>
 					<div class="wrap-name ba-absolute">
 						<p class="offer-welcome">HI</p>
 						<h1 class="offer-name"><span class="mobile-none">I'M</span> <span>ALEX</span>
 							<span>SHYIAN</span></h1>
 					</div>
-				</div>
-				<!-- /.ba-col-lg-6 -->
-				<div class="ba-col-5 offer-info">
-					<a href="/">
-						<img src="img/logo.svg" class="logo d-flex ml-auto" alt="">
-					</a>
 					<div class="wrap-text">
 						<span class="offer-dev">front-end developer</span>
 						<p class="offer-descr">Helping small businesses and agencies achieve high quality responsive
@@ -71,15 +90,15 @@
 					</div>
 					<!-- /.scroll -->
 				</div>
-				<!-- /.ba-col-lg-6 -->
+				<!-- /.col-lg-lg-6 -->
 			</div>
 		</div>
 	</header>
 	<main>
 		<section class="about">
-			<div class="ba-container">
-				<div class="ba-row">
-					<div class="ba-col-7">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
 						<h3 class="about-title section-title">ABOUT ME</h3>
 						<div class="about-wrap-text">
 							<p class="about-text text">
@@ -99,90 +118,302 @@
 								of light is to create more light, to open people’s eyes, to reveal the marvels around.
 							</p>
 						</div>
-						<div class="ba-button resume-btn slideleft">Download my resume <i class="fas fa-download"></i></div>
-						
+						<div class="ba-button resume-btn slideleft">Download my resume <i class="fas fa-download"></i>
+						</div>
+
 					</div>
-					<div class="ba-col-5">
+					<div class="col-lg-5 ba-relative">
 						<img src="img/me.jpg" alt="Shyian Oleksandr" class="my-photo">
 					</div>
 				</div>
-				<!-- /.ba-row -->
+				<!-- /.row -->
 			</div>
-			<!-- /.ba-container -->
+			<!-- /.container -->
 		</section>
 		<!-- /.about -->
 		<section class="skills">
-			<div class="ba-container">
-				<div class="ba-row">
-
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="skills-title section-title section-title-reverse">MY SKILLS</h3>
+					</div>
+					<!-- /.col-lg-12 -->
 				</div>
-				<!-- /.ba-row -->
+				<!-- /.row -->
+				<div class="row">
+					<div class="col-lg-3 d-flex col-skill">
+						<div class="skill-wrap">
+							<svg viewBox="0 0 100 100" class="skill-item" style="display: block; width: 100%;">
+								<path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#333333"
+									stroke-width="1" fill-opacity="0"></path>
+								<path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+									stroke="rgb(240,177,99)" stroke-width="6" fill-opacity="0"
+									style="stroke-dasharray: 295.416, 295.416; stroke-dashoffset: 35;"></path>
+							</svg>
+							<span class="skill-progress">85%</span>
+						</div>
+						<p class="skill-name">HTML</p>
+					</div>
+					<!-- /.col-lg-3 -->
+					<div class="col-lg-3 d-flex col-skill">
+						<div class="skill-wrap">
+							<svg viewBox="0 0 100 100" class="skill-item" style="display: block; width: 100%;">
+								<path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#333333"
+									stroke-width="1" fill-opacity="0"></path>
+								<path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+									stroke="rgb(240,177,99)" stroke-width="6" fill-opacity="0"
+									style="stroke-dasharray: 295.416, 295.416; stroke-dashoffset: 75;"></path>
+							</svg>
+							<span class="skill-progress">75%</span>
+						</div>
+						<p class="skill-name">CSS</p>
+					</div>
+					<!-- /.col-lg-3 -->
+					<div class="col-lg-3 d-flex col-skill">
+						<div class="skill-wrap">
+							<svg viewBox="0 0 100 100" class="skill-item" style="display: block; width: 100%;">
+								<path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#333333"
+									stroke-width="1" fill-opacity="0"></path>
+								<path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+									stroke="rgb(240,177,99)" stroke-width="6" fill-opacity="0"
+									style="stroke-dasharray: 295.416, 295.416; stroke-dashoffset: 150;"></path>
+							</svg>
+							<span class="skill-progress">50%</span>
+						</div>
+						<p class="skill-name">JavaScript</p>
+					</div>
+					<!-- /.col-lg-3 -->
+					<div class="col-lg-3 d-flex col-skill">
+						<div class="skill-wrap">
+							<svg viewBox="0 0 100 100" class="skill-item" style="display: block; width: 100%;">
+								<path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#333333"
+									stroke-width="1" fill-opacity="0"></path>
+								<path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+									stroke="rgb(240,177,99)" stroke-width="6" fill-opacity="0"
+									style="stroke-dasharray: 295.416, 295.416; stroke-dashoffset: 95;"></path>
+							</svg>
+							<span class="skill-progress">70%</span>
+						</div>
+						<p class="skill-name">Bootstrap/Foundation</p>
+					</div>
+					<!-- /.col-lg-3 -->
+				</div>
+				<!-- /.row -->
 			</div>
-			<!-- /.ba-container -->
+			<!-- /.container -->
 		</section>
 		<!-- /.skills -->
 		<section class="services">
-			<div class="ba-container">
-				<div class="ba-row">
-
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 ba-text-center">
+						<h3 class="services-title section-title-center section-title">MY SERVICES</h3>
+					</div>
 				</div>
-				<!-- /.ba-row -->
+				<!-- /.row -->
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="service-item">
+							<img class="service-item--icon" src="img/services/design-icon.svg" alt="">
+							<p class="service-item--name">Web Design</p>
+						</div>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-3 -->
+					<div class="col-lg-3">
+						<div class="service-item">
+							<img class="service-item--icon" src="img/services/coding-icon.svg" alt="">
+							<p class="service-item--name">Development</p>
+						</div>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-3 -->
+					<div class="col-lg-3">
+						<div class="service-item">
+							<img class="service-item--icon" src="img/services/branding.svg" alt="">
+							<p class="service-item--name">Branding</p>
+						</div>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-3 -->
+					<div class="col-lg-3">
+						<div class="service-item">
+							<img class="service-item--icon" src="img/services/marketing.svg" alt="">
+							<p class="service-item--name">Marketing</p>
+						</div>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-3 -->
+				</div>
+				<!-- /.row -->
 			</div>
-			<!-- /.ba-container -->
+			<!-- /.container -->
 		</section>
 		<!-- /.services -->
-		<section class="for-business">
-			<div class="ba-container">
-				<div class="ba-row">
+		<section class="business">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="business-title section-title">I MAY BE HELPFUL TO</h3>
+					</div>
+					<!-- /.col-lg-12 -->
+				</div>
+				<!-- /.row -->
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="business-item">
+							<img src="img/services/horeca.svg" alt="">
+							<h4 class="business-item--title">HoReCa</h4>
+							<p class="business-item--description">Lorem ipsum dolor sit amet, consectetur adipiscing
+								elit, sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nunc, ante vitae
+								neque ultrices. Nunc at elit volutpat dolor amet lectus dignissim. Nullam at at ac
+								donec. Ut sed platea ornare turpis. Id montes, nulla vel purus erat.
+							</p>
+						</div>
+						<!-- /.business-item -->
+					</div>
+					<div class="col-lg-4">
+						<div class="business-item">
+							<img src="img/services/commerce.svg" alt="">
+							<h4 class="business-item--title">COMMERCE</h4>
+							<p class="business-item--description">Lorem ipsum dolor sit amet, consectetur adipiscing
+								elit, sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nunc, ante vitae
+								neque ultrices. Nunc at elit volutpat dolor amet lectus dignissim. Nullam at at ac
+								donec. Ut sed platea ornare turpis. Id montes, nulla vel purus erat.
+							</p>
+						</div>
+						<!-- /.business-item -->
+					</div>
+					<div class="col-lg-4">
+						<div class="business-item">
+							<img src="img/services/tools.svg" alt="">
+							<h4 class="business-item--title">SERVICES</h4>
+							<p class="business-item--description">Lorem ipsum dolor sit amet, consectetur adipiscing
+								elit, sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nunc, ante vitae
+								neque ultrices. Nunc at elit volutpat dolor amet lectus dignissim. Nullam at at ac
+								donec. Ut sed platea ornare turpis. Id montes, nulla vel purus erat.
+							</p>
+						</div>
+						<!-- /.business-item -->
+					</div>
+				</div>
+				<!-- /.row -->
+				<div class="row">
 
 				</div>
-				<!-- /.ba-row -->
+				<!-- /.row -->
 			</div>
-			<!-- /.ba-container -->
+			<!-- /.container -->
 		</section>
 		<!-- /.for-business -->
 		<section class="cases">
-			<div class="ba-container">
-				<div class="ba-row">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 ba-text-center">
+						<h3 class="cases-title section-title-center section-title">CASES</h3>
+					</div>
+					<!-- /.col-lg-12 -->
+				</div>
+				<!-- /.row -->
+				<div class="row">
+					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="row">
+									<div class="col-lg-7">
+										<img src="img/cases/k-garden_logo.png" class="d-block w-100" alt="...">
+									</div>
+									<div class="col-lg-5">
+										<h5>Kvilinskiy garden</h5>
+										<p>Logo redesign</p>
+										<p>No one lights a lamp in order to hide it behind the door: the purpose of
+											light is
+											to create more light, to open people’s eyes, to reveal the marvels around.
+											No one lights a lamp in order to hide it behind the door.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col-lg-7">
+										<img src="img/cases/rush.jpg" class="d-block w-100" alt="...">
+									</div>
+									<div class="col-lg-5">
+										<h5>RUSH RUSH 31</h5>
+										<p>Website design</p>
+										<p>No one lights a lamp in order to hide it behind the door: the purpose of
+											light is
+											to create more light, to open people’s eyes, to reveal the marvels around.
+											No one lights a lamp in order to hide it behind the door.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+							data-slide="prev">
+							<i class="fas fa-chevron-left"></i>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls" role="button"
+							data-slide="next">
+							<i class="fas fa-chevron-right"></i>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
 
 				</div>
-				<!-- /.ba-row -->
 			</div>
-			<!-- /.ba-container -->
+			</div>
+			<!-- /.container -->
 		</section>
 		<!-- /.cases -->
 		<section class="testimonial">
-			<div class="ba-container">
-				<div class="ba-row">
-
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="testimonials-title section-title section-title-reverse">TESTIMONIALS</h3>
+					</div>
+					<!-- /.col-lg-12 -->
 				</div>
-				<!-- /.ba-row -->
+				<!-- /.row -->
 			</div>
-			<!-- /.ba-container -->
+			<!-- /.container -->
 		</section>
 		<!-- /.testimonial -->
 		<section class="contact">
-			<div class="ba-container">
-				<div class="ba-row">
+			<div class="container">
+				<div class="row">
 
 				</div>
-				<!-- /.ba-row -->
+				<!-- /.row -->
 			</div>
-			<!-- /.ba-container -->
+			<!-- /.container -->
 		</section>
 		<!-- /.contact -->
 	</main>
 	<footer>
-		<div class="ba-container">
-			<div class="ba-row">
+		<div class="container">
+			<div class="row">
 
 			</div>
-			<!-- /.ba-row -->
+			<!-- /.row -->
 		</div>
-		<!-- /.ba-container -->
+		<!-- /.container -->
 	</footer>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+		</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+		</script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

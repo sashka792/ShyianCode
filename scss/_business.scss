@@ -1,0 +1,19 @@
+.business-title {
+    margin-bottom: 80px;
+}
+.business-item{
+    text-align: center;
+    img{
+        margin: 0 auto 43px;    
+    }
+    &--title{
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: #373940;
+        margin-bottom: 11px;
+    }
+    &--description {
+        text-align: left;
+    }
+}
