@@ -1,9 +1,75 @@
-.cases .cases-title:after{
-    left: auto;
-    right: 41.5%;
-
+.cases {
+  // position: absolute;
 }
-.carousel .fas{
-    font-size: 4rem;
-    color: #787878;
+
+.cases::after {
+  content: "";
+}
+
+.cases .cases-title:after {
+  left: auto;
+  right: 41.3%;
+}
+.cases-title {
+  margin-bottom: 55px;
+}
+.carousel-inner {
+  padding: 0 60px;
+}
+.case-title {
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: rgb(55, 57, 64);
+  margin-bottom: 30px;
+}
+.case-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 55px;
+}
+.case-description {
+  width: 390px;
+  margin-bottom: 80px;
+}
+.button-case {
+  letter-spacing: 0em;
+  color: #373940;
+}
+.carousel__img-wrap {
+  border: 4px solid #f0b163;
+  padding: 14px;
+  position: relative;
+  z-index: -1;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    z-index: -2;
+  }
+  &:before {
+    left: 15%;
+    right: -4px;
+    top: -4px;
+    bottom: 30%;
+  }
+  &:after {
+    left: -4px;
+    right: 15%;
+    top: 30%;
+    bottom: -4px;
+  }
+}
+
+.carousel .fas {
+  font-size: 4rem;
+  color: #787878;
+}
+.carousel-control-prev {
+  justify-content: left;
+}
+.carousel-control-next {
+  justify-content: right;
+  right: -10%;
 }

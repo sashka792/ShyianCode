@@ -1,0 +1,44 @@
+//- header
+//- 	nav.main-nav
+//- 		.brand
+//- 			.logo
+//- 			.word-mark
+//- 		.menu
+//- 			.menu-toggle
+//- 				.menu-icon
+//- 					-for(i=0;i<3;i++)
+//- 						.bar
+//- 			ul.list-menu
+//- 				-for(i=0;i<4;i++)
+//- 					li.list-menu-item
+//- 						a(href="#")
+.header 
+	.container
+		.row
+			.col-lg-12
+				.wrap-main-nav
+					snav.main-nav
+						
+						.menu
+							.menu-toggle
+								.menu-icon
+									-for(i=0;i<3;i++)
+										.bar
+							ul.list-menu
+								li.list-menu-item
+									a.nav-link(href="#") Home
+								li.list-menu-item
+									a.nav-link(href="#") About
+								li.list-menu-item
+									a.nav-link(href="#") Portfolio
+								li.list-menu-item
+									a.nav-link(href="#") Pages
+								li.list-menu-item
+									a.nav-link(href="#") Blog
+								li.list-menu-item
+									a.nav-link(href="#") Contact
+						.brand
+							.logo
+								a(href="/")
+									img(src="/img/Group.svg", alt="eldas", class="logo-desktop")
+							//- .word-mark

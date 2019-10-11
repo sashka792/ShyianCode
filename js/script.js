@@ -1,7 +1,5 @@
-$(document).ready(function(){
-    new WOW().init();
-
-    //Main-nav
+$(document).ready(function () {
+  //Main-nav
   //On scroll functionality
   $(window).scroll( () => {
     var windowTop = $(window).scrollTop();
@@ -19,4 +17,5 @@ $(document).ready(function(){
       $('.menu-toggle').removeClass('closeMenu');
     });
   });
+
 });

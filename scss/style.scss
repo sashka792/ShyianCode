@@ -1,147 +1,168 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,700&display=swap");
 // @import '_normalize';
 // @import '_layout';
-@import '_header';
-@import '_skills';
-@import '_services';
-@import '_business';
-@import '_cases';
-@import '_testimonials';
-@import '_contact';
-@import 'footer';
+@import "_menu";
+@import "_offer";
+@import "_skills";
+@import "_services";
+@import "_business";
+@import "_cases";
+@import "_testimonials";
+@import "_contact";
+@import "footer";
 
-body{
-	font-family: 'Lato', sans-serif;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 14px;
-	color: rgba(55, 57, 64, 0.75);
+body {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(55, 57, 64, 0.75);
 }
 
 /* Layout */
-.ba-container{
-	padding-left: 20px;
-	padding-right: 20px;
-	max-width: 1200px;
+.ba-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
 }
-
+.no-margin {
+	margin-top: 0!important;
+}
+section {
+  margin: 100px 0;
+}
+.absolute {
+	display: block;
+	position: absolute;
+}
 /* Typography */
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Oswald', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
 }
-h1,h2,h3,h4,h5,h6,p {
-	margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 .section-title {
-	font-family: 'Oswald', sans-serif;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 36px;
-	align-items: center;
-	color: #787878;
-	position: relative;
-	padding-left: 20px;
-	z-index: 2;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  align-items: center;
+  color: #787878;
+  position: relative;
+  padding-left: 20px;
+  z-index: 2;
 }
 
-.section-title:after{
-	content: '';
-	position: absolute;
-	bottom: 4px;
-	left: 0;
-	width: 100px;
-	height: 15px;
-	background: #F0B163;
-	z-index: -1;
+.section-title:after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100px;
+  height: 15px;
+  background: #f0b163;
+  z-index: -1;
 }
 
-.section-title-reverse:after{
-	left: auto;
-	right: 0;
+.section-title-reverse:after {
+  left: auto;
+  right: 0;
 }
-.section-title-center:after{
-	left: auto;
-	right: 50.7%;
+.section-title-center:after {
+  left: auto;
+  right: 50.7%;
 }
 
-.text, p {
-	font-family: 'Lato',sans-serif;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 30px;
-	color: rgba(55, 57, 64, 0.75);
+.text,
+p {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: rgba(55, 57, 64, 0.75);
 }
 a,
 input[type="submit"],
 input[type="button"],
-button{
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+button {
+  transition: color 0.3s ease-in, border-color 0.3s ease-in, background-color 0.3s ease-in, opacity 0.3s ease-in;
 }
 input[type="submit"],
 input[type="button"],
 button,
-.ba-button{
-	font-weight: bold;
-	display: inline-block;
-	background: rgba(255, 255, 255, 0.4);
-	border: 2px solid #F0B163;
-	border: none;
-	outline: none;
-	background: transparent;
-	letter-spacing: 0.25em;
-	padding: 9px 36px; 
-	line-height: 2;
-	position: relative;
-	cursor: pointer;
-	// text-decoration: none; /* remove underline if using A instead of BUTTON tag */
-	overflow: hidden;
-	transition: all .5s;
+.ba-button {
+  font-weight: bold;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid #f0b163;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 9px 36px;
+  line-height: 2;
+  position: relative;
+  cursor: pointer;
+  // text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all 0.5s;
 }
 
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover,
-.ba-button:hover{
-	color: white;
+.ba-button:hover {
+  color: white;
 }
-  /* //// Default effect: Slide from Top  //// */
-  .ba-button:before,
-  .ba-button:after{
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	height: 100%;
-	border: 4px solid #F0B163;
-	background: #F0B163; /* onhover background color */
-	z-index: -1;
-	transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
-	transition: all .5s;
-  }
- 
-  .ba-button:before{
-	background: rgba(255, 255, 255, 0.4); /* button default background color */
-	z-index: -2;
-	transform: translate3D(0,0,0);
-  }
-  
-  .ba-button:hover:after{
-	transform: translate3D(0,0,0);
-	transition: all .5s;
-  }
-  
-  /* //// Slide Left  //// */
-  .slideleft:after{
-	top: 0;
-	z-index: -1;
-	transform: translate3D(-101%,0,0);
-  }
-  .slideleft:hover:after{
-	transition: all .5s;
-  }
+/* //// Default effect: Slide from Top  //// */
+.ba-button:before,
+.ba-button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  border: 4px solid #f0b163;
+  background: #f0b163; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0, -100%, 0); /* move elements above button so they don't appear initially */
+  transition: all 0.5s;
+}
+
+.ba-button:before {
+  background: rgba(255, 255, 255, 0.4); /* button default background color */
+  z-index: -2;
+  transform: translate3D(0, 0, 0);
+}
+
+.ba-button:hover:after {
+  transform: translate3D(0, 0, 0);
+  transition: all 0.5s;
+}
+
+/* //// Slide Left  //// */
+.slideleft:after {
+  top: 0;
+  z-index: -1;
+  transform: translate3D(-101%, 0, 0);
+}
+.slideleft:hover:after {
+  transition: all 0.5s;
+}
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -149,7 +170,12 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+  transition: color 0.3s ease-in, border-color 0.3s ease-in, background-color 0.3s ease-in, opacity 0.3s ease-in;
+  margin-top: 28px;
+  padding: 12px 0 12px 18px;
+  font-size: 12px;
+  font-family: Lato;
+  font-weight: normal;
 }
 
 input[type="text"]:focus,
@@ -159,41 +185,36 @@ input[type="number"]:focus,
 input[type="tel"]:focus,
 textarea:focus,
 select:focus {
-
 }
 textarea {
-
 }
 
-.about {
-	  margin: 100px 0;
+.about-wrap-text {
+  padding: 30px 0px 0 0px;
+  .about-text {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
-  .about-wrap-text{
-	  padding: 30px 0px 0 0px;
-	  .about-text{
-		  margin-bottom: 30px;
-		  &:last-child{
-			  margin-bottom: 0;
-		  }
-	  }
-  }
 
-  .resume-btn{
-	  padding: 10px 15px;
-	  line-height: 17px;
-	  letter-spacing: 0;
-	  margin-top: 65px;
-	  margin-left: 25%;
-	  i{
-		  padding-left: 15px;
-	  }
+.resume-btn {
+  padding: 10px 15px;
+  line-height: 17px;
+  letter-spacing: 0;
+  margin-top: 65px;
+  margin-left: 25%;
+  i {
+    padding-left: 15px;
   }
+}
 
-  .my-photo {
-	  position: absolute;
-  }
+.my-photo {
+  position: absolute;
+}
 
-  .skills .section-title {
-	text-align: right;
-	padding-right: 22px;
-  }
+.skills .section-title {
+  text-align: right;
+  padding-right: 22px;
+}
