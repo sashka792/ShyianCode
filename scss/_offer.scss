@@ -61,7 +61,26 @@
       font-size: 1.875rem;
     }
   }
+  .offer-info .wrap-text {
+    margin-top: 50%;
+    .offer-dev {
+      margin-left: 20px;
+      font-size: 0.875rem;
+    }
+    .offer-descr {
+      font-size: 0.75rem;
+      letter-spacing: 0.075em;
+    }
+    
+  }
+  .offer-info .wrap-social {
+    margin-top: 80px;
+    i{
+      font-size: 32px;
+    }
+  }
 }
+
 .wrap-text {
   margin-top: 90%;
   @media screen and (max-width: 1440px) {
@@ -89,17 +108,6 @@
     @media screen and (max-width: 1440px) {
       font-size: 1rem;
       margin-top: 10%;
-    }
-  }
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    margin-top: 50%;
-    .offer-dev {
-      margin-left: 20px;
-      font-size: 0.875rem;
-    }
-    .offer-descr {
-      font-size: 0.75rem;
-      letter-spacing: 0.075em;
     }
   }
 }
@@ -161,7 +169,6 @@
     -webkit-transform: translateY(-15px);
   }
 }
-
 @-moz-keyframes bounce {
   0%,
   20%,
@@ -177,7 +184,6 @@
     -moz-transform: translateY(-15px);
   }
 }
-
 @keyframes bounce {
   0%,
   20%,

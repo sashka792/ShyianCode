@@ -35,7 +35,7 @@
   position: relative; }
   @media screen and (max-width: 768px) {
     .wrap-main-nav {
-      padding: 20px 0;
+      padding: 10px 0;
       background: #fff; } }
 
 .main-nav {
@@ -68,9 +68,17 @@
 .list-menu {
   background: #fff;
   margin-bottom: 6rem; }
+  @media screen and (max-width: 1440px) {
+    .list-menu {
+      margin-bottom: 150px;
+      padding-left: 100px; } }
   @media screen and (max-width: 1024px) {
     .list-menu {
       margin-bottom: 20px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .list-menu {
+      margin-bottom: 0px;
+      padding-left: 20px; } }
 
 .brand {
   -webkit-box-pack: end;
@@ -119,7 +127,8 @@
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
-  display: none; }
+  display: none;
+  margin-right: 10px; }
 
 .menu-toggle:hover .bar {
   width: 25px; }
@@ -156,11 +165,6 @@
 
 .bar:last-child {
   width: 15px; }
-
-@media screen and (max-width: 1440px) {
-  .list-menu {
-    margin-bottom: 150px;
-    padding-left: 110px; } }
 
 @media screen and (max-width: 992px) {
   .main-nav {
@@ -334,7 +338,19 @@
       font-size: 1.875rem;
       margin-bottom: 0px; }
     .wrap-name .offer-name {
-      font-size: 1.875rem; } }
+      font-size: 1.875rem; }
+  .offer-info .wrap-text {
+    margin-top: 50%; }
+    .offer-info .wrap-text .offer-dev {
+      margin-left: 20px;
+      font-size: 0.875rem; }
+    .offer-info .wrap-text .offer-descr {
+      font-size: 0.75rem;
+      letter-spacing: 0.075em; }
+  .offer-info .wrap-social {
+    margin-top: 80px; }
+    .offer-info .wrap-social i {
+      font-size: 32px; } }
 
 .wrap-text {
   margin-top: 90%; }
@@ -363,15 +379,6 @@
       .wrap-text .offer-descr {
         font-size: 1rem;
         margin-top: 10%; } }
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    .wrap-text {
-      margin-top: 50%; }
-      .wrap-text .offer-dev {
-        margin-left: 20px;
-        font-size: 0.875rem; }
-      .wrap-text .offer-descr {
-        font-size: 0.75rem;
-        letter-spacing: 0.075em; } }
 
 .offer-btn {
   margin-left: 3px;
@@ -500,8 +507,19 @@ svg:not(:root) {
   text-align: center;
   margin-top: 20px;
   color: #000;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .col-skill {
+    margin-bottom: 40px; }
+  .skills svg {
+    display: block;
+    max-width: 120px; }
+  .skill-progress {
+    font-size: 1.5rem; }
+  .skill-foundation {
+    display: block; } }
 
 .services {
   background-color: rgba(209, 212, 215, 0.75);
@@ -518,13 +536,30 @@ svg:not(:root) {
   .service-item--icon {
     margin: 35px auto 20px; }
   .service-item--name {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 36px;
     color: #373940;
     padding-bottom: 15px;
     margin: 0 auto;
     width: 85%;
-    border-bottom: 6px solid #F0B163; }
+    border-bottom: 6px solid #f0b163; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .services {
+    background-color: white;
+    padding: 0; }
+    .services .services-title {
+      margin-bottom: 30px; }
+  .service-item {
+    width: 50%;
+    height: 154px;
+    height: 90%;
+    margin: 30px auto; }
+    .service-item--icon {
+      width: 20%;
+      margin: 20px auto 10px; }
+    .service-item--name {
+      font-size: 24px; } }
 
 .business-title {
   margin-bottom: 80px; }
@@ -774,6 +809,9 @@ body {
 
 section {
   margin: 100px 0; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    section {
+      margin: 70px 0; } }
 
 .absolute {
   display: block;
