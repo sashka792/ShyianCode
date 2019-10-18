@@ -1,7 +1,3 @@
-.cases {
-  // position: absolute;
-}
-
 .cases::after {
   content: "";
 }
@@ -67,9 +63,9 @@
   color: #787878;
 }
 .carousel-control-prev {
-  justify-content: left;
+  justify-content: flex-start;
 }
 .carousel-control-next {
-  justify-content: right;
-  right: -10%;
+  justify-content: flex-end;
+  // right: -10%;
 }

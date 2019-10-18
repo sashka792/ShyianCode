@@ -8,6 +8,10 @@
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .header .container {
+      max-width: 100%;
+      padding: 0px; } }
 
 .nav-link {
   color: #373940;
@@ -62,7 +66,11 @@
   list-style: none; }
 
 .list-menu {
-  background: #fff; }
+  background: #fff;
+  margin-bottom: 6rem; }
+  @media screen and (max-width: 1024px) {
+    .list-menu {
+      margin-bottom: 20px; } }
 
 .brand {
   -webkit-box-pack: end;
@@ -74,7 +82,9 @@
   margin-top: 60px; }
   @media screen and (max-width: 768px) {
     .logo {
-      margin-top: 0; } }
+      margin-top: 20px;
+      padding-bottom: 10px;
+      margin-left: 20px; } }
 
 .menu {
   position: absolute;
@@ -83,9 +93,16 @@
   -webkit-transform: rotate(-90deg) translate(-375px, -370px);
   -ms-transform: rotate(-90deg) translate(-375px, -370px);
   transform: rotate(-90deg) translate(-375px, -370px); }
+  @media screen and (max-width: 1440px) {
+    .menu {
+      top: -80px;
+      left: 40px; } }
 
 .list-menu-item {
-  margin-left: 15px; }
+  margin-left: 10px; }
+  @media screen and (max-width: 1440px) {
+    .list-menu-item .nav-link {
+      font-size: 0.7rem; } }
 
 .menu-toggle {
   width: 55px;
@@ -140,6 +157,11 @@
 .bar:last-child {
   width: 15px; }
 
+@media screen and (max-width: 1440px) {
+  .list-menu {
+    margin-bottom: 150px;
+    padding-left: 110px; } }
+
 @media screen and (max-width: 992px) {
   .main-nav {
     -ms-grid-columns: 1fr 1fr;
@@ -176,11 +198,11 @@
     -o-transition: all 0.3s;
     transition: all 0.3s; }
   .list-menu.showMenu {
-    padding-top: 30px;
+    padding-top: 100px;
     height: 100vh; }
     .list-menu.showMenu .list-menu-item {
       text-align: left;
-      padding-left: 30px;
+      padding-left: 10px;
       opacity: 1;
       visibility: visible; }
   .list-menu-item {
@@ -258,12 +280,23 @@
       left: 0; }
 
 /*---------- end of menu link animation ----------*/
-.wrap-name-mobile {
+.offer-bg {
+  background: url(../img/main.jpg) no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  min-height: 100vh; }
+
+.name-mobile {
+  position: absolute;
+  top: 150px;
   max-width: 145px; }
-  .wrap-name-mobile p {
+  .name-mobile p {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 36px; }
+  .name-mobile--surname {
+    margin-top: 10px;
+    margin-left: 30px; }
 
 .wrap-name {
   position: absolute;
@@ -271,7 +304,7 @@
   left: -90px; }
   @media screen and (max-width: 1440px) {
     .wrap-name {
-      top: 25%; } }
+      top: 20%; } }
   .wrap-name .offer-welcome {
     font-family: "Oswald";
     font-weight: 700;
@@ -291,23 +324,54 @@
       .wrap-name .offer-name {
         font-size: 4rem; } }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .wrap-name {
+    top: 15%;
+    left: 3%; }
+    .wrap-name .offer-welcome {
+      color: #373940;
+      text-shadow: none;
+      font-size: 1.875rem;
+      margin-bottom: 0px; }
+    .wrap-name .offer-name {
+      font-size: 1.875rem; } }
+
 .wrap-text {
   margin-top: 90%; }
+  @media screen and (max-width: 1440px) {
+    .wrap-text {
+      margin-top: 70%; } }
   .wrap-text .offer-dev {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-left: 100px;
     letter-spacing: 0.25em;
     color: #000000; }
+    @media screen and (max-width: 1024px) {
+      .wrap-text .offer-dev {
+        font-size: 1rem; } }
   .wrap-text .offer-descr {
     font-weight: 700;
-    font-size: 18px;
-    margin-top: 62px;
+    font-size: 1.125rem;
+    margin-top: 10%;
     line-height: 1.7em;
     letter-spacing: 0.046em;
     margin-bottom: 44px;
     padding: 0 0px 0 4px; }
+    @media screen and (max-width: 1440px) {
+      .wrap-text .offer-descr {
+        font-size: 1rem;
+        margin-top: 10%; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .wrap-text {
+      margin-top: 50%; }
+      .wrap-text .offer-dev {
+        margin-left: 20px;
+        font-size: 0.875rem; }
+      .wrap-text .offer-descr {
+        font-size: 0.75rem;
+        letter-spacing: 0.075em; } }
 
 .offer-btn {
   margin-left: 3px;
@@ -324,6 +388,9 @@
       color: #333333; }
 
 .scroll {
+  position: absolute;
+  bottom: 2%;
+  right: 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -331,11 +398,17 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 50px;
   color: #373940; }
   .scroll .scroll-svg {
     padding-right: 20px;
     margin-bottom: 15px; }
+  @media screen and (max-width: 1440px) {
+    .scroll {
+      margin-top: -85px; } }
+  @media screen and (min-width: 320px) and (max-width: 650px) {
+    .scroll {
+      display: block;
+      right: 75%; } }
 
 .bounce {
   -webkit-animation: bounce 2s infinite;
@@ -450,7 +523,7 @@ svg:not(:root) {
     color: #373940;
     padding-bottom: 15px;
     margin: 0 auto;
-    width: 220px;
+    width: 85%;
     border-bottom: 6px solid #F0B163; }
 
 .business-title {
@@ -528,15 +601,14 @@ svg:not(:root) {
   color: #787878; }
 
 .carousel-control-prev {
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  justify-content: left; }
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
 
 .carousel-control-next {
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  justify-content: right;
-  right: -10%; }
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
 
 .testimonials-title {
   padding-right: 35px;
@@ -550,20 +622,20 @@ svg:not(:root) {
   font-weight: 700;
   font-size: 24px;
   color: #373940;
-  margin-bottom: 30px; }
+  margin-bottom: 15px; }
 
 .testimonial-subtitle {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 55px; }
+  margin-bottom: 35px; }
 
 .testimonial-description {
-  width: 390px;
-  margin-bottom: 80px; }
+  padding-right: 15px; }
 
 .testimonials .carousel-item {
   -webkit-box-shadow: 0px 4px 25px rgba(120, 120, 120, 0.25);
-  box-shadow: 0px 4px 25px rgba(120, 120, 120, 0.25); }
+  box-shadow: 0px 4px 25px rgba(120, 120, 120, 0.25);
+  padding: 40px 30px 40px 35px; }
 
 .contact {
   background: url(../img/cases/contact-bg.jpg) no-repeat center;
@@ -583,7 +655,21 @@ svg:not(:root) {
   .contact-form input[name="name"] {
     margin-top: 0; }
   .contact-form .button-contact {
-    margin-top: 28px; }
+    padding: 15px 50px;
+    line-height: 1;
+    margin: 28px auto;
+    color: #373940;
+    z-index: 1;
+    max-width: 200px; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .contact .contact-title {
+    padding-top: 20px;
+    margin-bottom: 20px; }
+  .contact .contact-form {
+    padding: 20px 40px; }
+  .button-contact {
+    padding: 15px 30px; } }
 
 footer {
   margin-top: 35px; }
@@ -618,7 +704,8 @@ footer {
   font-weight: 400; }
   .wrap-contacts .footer-name {
     margin-top: 25px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-weight: 400; }
   .wrap-contacts p {
     color: #373940; }
   .wrap-contacts a {
@@ -626,13 +713,21 @@ footer {
     color: #373940;
     display: block;
     margin-bottom: 10px; }
+  .wrap-contacts .phone-icon {
+    margin-left: 20px; }
+    .wrap-contacts .phone-icon a {
+      margin-bottom: 5px;
+      margin-top: 4px; }
+    .wrap-contacts .phone-icon i {
+      font-size: 20px;
+      margin-right: 15px; }
 
 .footer-follow {
   margin: 25px 0px 40px;
   color: #373940; }
 
 .footer-social i {
-  margin-right: 22px;
+  margin-right: 15px;
   font-size: 32px;
   color: rgba(55, 57, 64, 0.75); }
   .footer-social i:hover {
@@ -650,6 +745,16 @@ footer {
     color: #ffffff;
     padding: 15px;
     margin: 0 auto; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .container {
+    text-align: center; }
+  .footer .footer-name {
+    font-weight: 700; }
+  .footer-social {
+    margin-top: 20px; }
+    .footer-social i {
+      font-size: 40px; } }
 
 body {
   font-family: "Lato", sans-serif;
@@ -704,6 +809,9 @@ p {
   position: relative;
   padding-left: 20px;
   z-index: 2; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .section-title {
+      font-size: 24px; } }
 
 .section-title:after {
   content: "";
@@ -714,6 +822,11 @@ p {
   height: 15px;
   background: #f0b163;
   z-index: -1; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .section-title:after {
+      width: 50px;
+      height: 10px;
+      bottom: 2px; } }
 
 .section-title-reverse:after {
   left: auto;
@@ -831,7 +944,18 @@ select {
   padding: 12px 0 12px 18px;
   font-size: 12px;
   font-family: Lato;
-  font-weight: normal; }
+  font-weight: normal;
+  border-radius: 0; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    textarea,
+    select {
+      margin-top: 15px;
+      padding: 10px 0 10px 10px; } }
 
 .about-wrap-text {
   padding: 30px 0px 0 0px; }
@@ -849,8 +973,10 @@ select {
   .resume-btn i {
     padding-left: 15px; }
 
-.my-photo {
-  position: absolute; }
+.about-photo {
+  background: url(../img/me.jpg) no-repeat center;
+  max-width: 100%;
+  background-size: initial; }
 
 .skills .section-title {
   text-align: right;

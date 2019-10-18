@@ -33,6 +33,7 @@ footer {
   .footer-name {
     margin-top: 25px;
     margin-bottom: 10px;
+    font-weight: 400;
   }
   p {
     color: #373940;
@@ -43,14 +44,27 @@ footer {
     display: block;
     margin-bottom: 10px;
   }
+  .phone-icon {
+      margin-left: 20px;
+    a {
+      margin-bottom: 5px;
+      margin-top: 4px;
+    }
+    i {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+  }
 }
+
 .footer-follow {
   margin: 25px 0px 40px;
   color: #373940;
 }
+
 .footer-social {
   i {
-    margin-right: 22px;
+    margin-right: 15px;
     font-size: 32px;
     color: rgba(55, 57, 64, 0.75);
     &:hover {
@@ -69,5 +83,20 @@ footer {
     color: #ffffff;
     padding: 15px;
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  .footer .container{
+    text-align: center;
+  }
+  .footer .footer-name{
+    font-weight: 700;
+  }
+  .footer-social{
+    margin-top: 20px;
+    i{
+      font-size: 40px;
+    }
   }
 }

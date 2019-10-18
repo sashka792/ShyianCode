@@ -1,25 +1,42 @@
 .contact {
-    background: url(../img/cases/contact-bg.jpg) no-repeat center;
-    margin-bottom: 0;
+  background: url(../img/cases/contact-bg.jpg) no-repeat center;
+  margin-bottom: 0;
 }
 
-.contact .contact-title{
-    padding-top: 40px;
-    margin-bottom: 36px;
-    color: #373940;
-    &::after{
-        display: none;
-    }
+.contact .contact-title {
+  padding-top: 40px;
+  margin-bottom: 36px;
+  color: #373940;
+  &::after {
+    display: none;
+  }
 }
 
 .contact-form {
-    background-color: #fff;
-    padding: 50px 80px;
-    margin-bottom: 85px;
-    input[name="name"]{
-        margin-top: 0;
-    }
-    .button-contact{
-        margin-top: 28px;
-    }
+  background-color: #fff;
+  padding: 50px 80px;
+  margin-bottom: 85px;
+  input[name="name"] {
+    margin-top: 0;
+  }
+  .button-contact {
+    padding: 15px 50px;
+    line-height: 1;
+    margin: 28px auto;
+    color: #373940;
+    z-index: 1;
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .contact .contact-title {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .contact .contact-form {
+    padding: 20px 40px;
+  }
+  .button-contact{
+    padding: 15px 30px;
+  }
 }

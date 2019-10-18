@@ -26,14 +26,14 @@ body {
   max-width: 1200px;
 }
 .no-margin {
-	margin-top: 0!important;
+  margin-top: 0 !important;
 }
 section {
   margin: 100px 0;
 }
 .absolute {
-	display: block;
-	position: absolute;
+  display: block;
+  position: absolute;
 }
 /* Typography */
 h1,
@@ -63,6 +63,9 @@ p {
   position: relative;
   padding-left: 20px;
   z-index: 2;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .section-title:after {
@@ -74,6 +77,11 @@ p {
   height: 15px;
   background: #f0b163;
   z-index: -1;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    width: 50px;
+    height: 10px;
+    bottom: 2px;
+  }
 }
 
 .section-title-reverse:after {
@@ -176,6 +184,11 @@ select {
   font-size: 12px;
   font-family: Lato;
   font-weight: normal;
+  border-radius: 0;
+  @media screen and (min-width: 320px) and (max-width: 768px){
+    margin-top: 15px;
+    padding: 10px 0 10px 10px;
+  }
 }
 
 input[type="text"]:focus,
@@ -210,10 +223,11 @@ textarea {
   }
 }
 
-.my-photo {
-  position: absolute;
+.about-photo {
+  background: url(../img/me.jpg) no-repeat center;
+  max-width: 100%;
+  background-size: initial;
 }
-
 .skills .section-title {
   text-align: right;
   padding-right: 22px;
