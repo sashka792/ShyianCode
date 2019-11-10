@@ -1,6 +1,24 @@
 .services {
   background-color: rgba(209, 212, 215, 0.75);
   padding: 45px 0 75px;
+  // animation: pulse 15s infinite;
+  // @keyframes pulse {
+  //   0% {
+  //     background-color: rgba(209, 212, 215, 0.75);
+  //   }
+  //   25% {
+  //     background-color: rgba(189, 192, 195, 0.75);
+  //   }
+  //   50% {
+  //     background-color: rgba(0, 0, 0, 0.75);
+  //   }
+  //   75% {
+  //     background-color: rgba(189, 192, 195, 0.75);
+  //   }
+  //   100% {
+  //     background-color: rgba(209, 212, 215, 0.75);
+  //   }
+  // }
   .services-title {
     margin-bottom: 70px;
   }

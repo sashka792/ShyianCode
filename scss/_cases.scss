@@ -1,5 +1,26 @@
-.cases::after {
+.cases .container {
+  position: relative;
+}
+
+.cases .container::after {
+  position: absolute;
+  bottom: -45px;
+  right: -80px;
+  left: -130px;
   content: "";
+  border: 1px solid #F0B163;
+  height: calc(100% + 4rem);
+  z-index: -1;
+}
+.cases .container::before {
+  position: absolute;
+  bottom: -25px;
+  right: -50px;
+  left: -180px;
+  content: "";
+  border: 1px solid #D1D4D7;
+  height: calc(100% + 4rem);
+  z-index: -1;
 }
 
 .cases .cases-title:after {
@@ -57,7 +78,6 @@
     bottom: -4px;
   }
 }
-
 .carousel .fas {
   font-size: 4rem;
   color: #787878;
@@ -68,4 +88,33 @@
 .carousel-control-next {
   justify-content: flex-end;
   // right: -10%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .carousel__img-wrap {
+    border: none;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  .case-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  .case-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .case-title,
+  .case-subtitle {
+    text-align: center;
+  }
+  .case-description {
+    display: none;
+  }
+  .button-case {
+    text-align: center;
+    margin: 5px auto;
+  }
 }

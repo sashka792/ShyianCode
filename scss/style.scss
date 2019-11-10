@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,700&display=swap");
 // @import '_normalize';
 // @import '_layout';
+
 @import "_menu";
 @import "_offer";
 @import "_skills";
@@ -219,19 +220,31 @@ textarea {
   padding: 10px 15px;
   line-height: 17px;
   letter-spacing: 0;
-  margin-top: 65px;
-  margin-left: 25%;
+  margin-top: 50px;
+  margin-left: 40%;
   i {
     padding-left: 15px;
   }
 }
 
 .about-photo {
-  background: url(../img/me.jpg) no-repeat center;
+  background: url(../img/me.jpg) no-repeat center/cover;
   max-width: 100%;
-  background-size: initial;
 }
 .skills .section-title {
   text-align: right;
   padding-right: 22px;
+}
+
+.trngl{
+  position: absolute;
+  z-index: -1;
+  &--o{
+    top: -8em;
+    left: -18em;
+  }
+  &--gr{
+    top: -5em;
+    left: -18em;
+  }
 }

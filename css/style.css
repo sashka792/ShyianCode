@@ -40,6 +40,7 @@
 
 .main-nav {
   width: 100%;
+  margin-top: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -86,8 +87,7 @@
   justify-content: flex-end; }
 
 .logo {
-  cursor: pointer;
-  margin-top: 60px; }
+  cursor: pointer; }
   @media screen and (max-width: 768px) {
     .logo {
       margin-top: 20px;
@@ -272,7 +272,7 @@
     -o-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
     transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s; }
   .nav-link:after {
-    background-color: #f97a2e;
+    background-color: #f0b163;
     -webkit-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
     -o-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
     transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1); }
@@ -577,8 +577,28 @@ svg:not(:root) {
   .business-item--description {
     text-align: left; }
 
-.cases::after {
-  content: ""; }
+.cases .container {
+  position: relative; }
+
+.cases .container::after {
+  position: absolute;
+  bottom: -45px;
+  right: -80px;
+  left: -130px;
+  content: "";
+  border: 1px solid #F0B163;
+  height: calc(100% + 4rem);
+  z-index: -1; }
+
+.cases .container::before {
+  position: absolute;
+  bottom: -25px;
+  right: -50px;
+  left: -180px;
+  content: "";
+  border: 1px solid #D1D4D7;
+  height: calc(100% + 4rem);
+  z-index: -1; }
 
 .cases .cases-title:after {
   left: auto;
@@ -645,12 +665,32 @@ svg:not(:root) {
   -ms-flex-pack: end;
   justify-content: flex-end; }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .carousel__img-wrap {
+    border: none; }
+    .carousel__img-wrap:before, .carousel__img-wrap:after {
+      display: none; }
+  .case-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px; }
+  .case-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 10px; }
+  .case-title,
+  .case-subtitle {
+    text-align: center; }
+  .case-description {
+    display: none; }
+  .button-case {
+    text-align: center;
+    margin: 5px auto; } }
+
 .testimonials-title {
   padding-right: 35px;
   text-align: right; }
 
 .testimonials-subtitle {
-  margin-bottom: 70px; }
+  margin-bottom: 40px; }
 
 .testimonial-title {
   font-family: "Lato", sans-serif;
@@ -672,8 +712,11 @@ svg:not(:root) {
   box-shadow: 0px 4px 25px rgba(120, 120, 120, 0.25);
   padding: 40px 30px 40px 35px; }
 
+.carousel-control-next, .carousel-control-prev {
+  width: 5%; }
+
 .contact {
-  background: url(../img/cases/contact-bg.jpg) no-repeat center;
+  background: url(../img/cases/contact-bg.jpg) no-repeat center/cover;
   margin-bottom: 0; }
 
 .contact .contact-title {
@@ -1006,18 +1049,27 @@ select {
   padding: 10px 15px;
   line-height: 17px;
   letter-spacing: 0;
-  margin-top: 65px;
-  margin-left: 25%; }
+  margin-top: 50px;
+  margin-left: 40%; }
   .resume-btn i {
     padding-left: 15px; }
 
 .about-photo {
-  background: url(../img/me.jpg) no-repeat center;
-  max-width: 100%;
-  background-size: initial; }
+  background: url(../img/me.jpg) no-repeat center/cover;
+  max-width: 100%; }
 
 .skills .section-title {
   text-align: right;
   padding-right: 22px; }
+
+.trngl {
+  position: absolute;
+  z-index: -1; }
+  .trngl--o {
+    top: -8em;
+    left: -18em; }
+  .trngl--gr {
+    top: -5em;
+    left: -18em; }
 
 /*# sourceMappingURL=style.css.map */
