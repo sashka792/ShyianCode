@@ -2,26 +2,26 @@
   position: relative;
 }
 
-.cases .container::after {
-  position: absolute;
-  bottom: -45px;
-  right: -80px;
-  left: -130px;
-  content: "";
-  border: 1px solid #F0B163;
-  height: calc(100% + 4rem);
-  z-index: -1;
-}
-.cases .container::before {
-  position: absolute;
-  bottom: -25px;
-  right: -50px;
-  left: -180px;
-  content: "";
-  border: 1px solid #D1D4D7;
-  height: calc(100% + 4rem);
-  z-index: -1;
-}
+// .cases .container::after {
+//   position: absolute;
+//   bottom: -45px;
+//   right: -80px;
+//   left: -130px;
+//   content: "";
+//   border: 1px solid #F0B163;
+//   height: calc(100% + 4rem);
+//   z-index: -1;
+// }
+// .cases .container::before {
+//   position: absolute;
+//   bottom: -25px;
+//   right: -50px;
+//   left: -180px;
+//   content: "";
+//   border: 1px solid #D1D4D7;
+//   height: calc(100% + 4rem);
+//   z-index: -1;
+// }
 
 .cases .cases-title:after {
   left: auto;
@@ -52,6 +52,9 @@
 .button-case {
   letter-spacing: 0em;
   color: #373940;
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  }
 }
 .carousel__img-wrap {
   border: 4px solid #f0b163;
@@ -84,10 +87,16 @@
 }
 .carousel-control-prev {
   justify-content: flex-start;
+  img{
+    max-width: 100%;
+  }
 }
 .carousel-control-next {
   justify-content: flex-end;
   // right: -10%;
+  img{
+    max-width: 100%;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -115,6 +124,6 @@
   }
   .button-case {
     text-align: center;
-    margin: 5px auto;
+    margin: 5px calc(50% - 88px);
   }
 }

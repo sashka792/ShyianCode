@@ -4,7 +4,10 @@
 .business-item{
     text-align: center;
     img{
-        margin: 0 auto 43px;    
+        margin: 0 auto 43px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 5px;
+        }    
     }
     &--title{
         font-family: 'Lato', sans-serif;
@@ -12,8 +15,14 @@
         font-size: 24px;
         color: #373940;
         margin-bottom: 11px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 15px;
+        }
     }
     &--description {
         text-align: left;
+    }
+    @media screen and (max-width: 768px) {
+        margin-bottom: 40px;
     }
 }

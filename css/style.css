@@ -35,7 +35,7 @@
   position: relative; }
   @media screen and (max-width: 768px) {
     .wrap-main-nav {
-      padding: 10px 0;
+      padding: 5px 0;
       background: #fff; } }
 
 .main-nav {
@@ -168,6 +168,7 @@
 
 @media screen and (max-width: 992px) {
   .main-nav {
+    margin-top: 5px;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr; }
   .list-menu-right {
@@ -215,9 +216,9 @@
     padding: 16px 0;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all 0.3s 0.1s;
-    -o-transition: all 0.3s 0.1s;
-    transition: all 0.3s 0.1s; }
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
   .nav-link:hover:after, .nav-link:hover:before {
     display: none; }
   .header {
@@ -397,7 +398,7 @@
 .scroll {
   position: absolute;
   bottom: 2%;
-  right: 40px;
+  right: 11%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -526,6 +527,9 @@ svg:not(:root) {
   padding: 45px 0 75px; }
   .services .services-title {
     margin-bottom: 70px; }
+    @media screen and (max-width: 768px) {
+      .services .services-title {
+        margin-bottom: 30px; } }
 
 .service-item {
   border: 2px solid rgba(55, 57, 64, 0.5);
@@ -568,37 +572,26 @@ svg:not(:root) {
   text-align: center; }
   .business-item img {
     margin: 0 auto 43px; }
+    @media screen and (max-width: 768px) {
+      .business-item img {
+        margin-bottom: 5px; } }
   .business-item--title {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: #373940;
     margin-bottom: 11px; }
+    @media screen and (max-width: 768px) {
+      .business-item--title {
+        margin-bottom: 15px; } }
   .business-item--description {
     text-align: left; }
+  @media screen and (max-width: 768px) {
+    .business-item {
+      margin-bottom: 40px; } }
 
 .cases .container {
   position: relative; }
-
-.cases .container::after {
-  position: absolute;
-  bottom: -45px;
-  right: -80px;
-  left: -130px;
-  content: "";
-  border: 1px solid #F0B163;
-  height: calc(100% + 4rem);
-  z-index: -1; }
-
-.cases .container::before {
-  position: absolute;
-  bottom: -25px;
-  right: -50px;
-  left: -180px;
-  content: "";
-  border: 1px solid #D1D4D7;
-  height: calc(100% + 4rem);
-  z-index: -1; }
 
 .cases .cases-title:after {
   left: auto;
@@ -629,6 +622,11 @@ svg:not(:root) {
 .button-case {
   letter-spacing: 0em;
   color: #373940; }
+  @media screen and (max-width: 768px) {
+    .button-case {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .carousel__img-wrap {
   border: 4px solid #f0b163;
@@ -659,11 +657,15 @@ svg:not(:root) {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start; }
+  .carousel-control-prev img {
+    max-width: 100%; }
 
 .carousel-control-next {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+  .carousel-control-next img {
+    max-width: 100%; }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .carousel__img-wrap {
@@ -683,7 +685,7 @@ svg:not(:root) {
     display: none; }
   .button-case {
     text-align: center;
-    margin: 5px auto; } }
+    margin: 5px calc(50% - 88px); } }
 
 .testimonials-title {
   padding-right: 35px;
@@ -691,6 +693,9 @@ svg:not(:root) {
 
 .testimonials-subtitle {
   margin-bottom: 40px; }
+  @media screen and (max-width: 576px) {
+    .testimonials-subtitle {
+      margin-bottom: 10px; } }
 
 .testimonial-title {
   font-family: "Lato", sans-serif;
@@ -706,14 +711,60 @@ svg:not(:root) {
 
 .testimonial-description {
   padding-right: 15px; }
+  @media screen and (max-width: 576px) {
+    .testimonial-description--mob {
+      display: none; } }
+
+@media screen and (max-width: 576px) {
+  .testimonials .carousel-inner {
+    padding: 0px 40px; } }
+
+.testimonials .carousel-control-prev img,
+.testimonials .carousel-control-next img {
+  max-width: 100%; }
 
 .testimonials .carousel-item {
   -webkit-box-shadow: 0px 4px 25px rgba(120, 120, 120, 0.25);
   box-shadow: 0px 4px 25px rgba(120, 120, 120, 0.25);
-  padding: 40px 30px 40px 35px; }
+  padding: 40px 30px 40px 35px;
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease; }
+  @media screen and (max-width: 576px) {
+    .testimonials .carousel-item {
+      padding: 25px 15px 25px 15px; } }
 
 .carousel-control-next, .carousel-control-prev {
   width: 5%; }
+
+@media screen and (max-width: 768px) {
+  .wrap-info {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; } }
+
+@media screen and (max-width: 768px) {
+  .wrap-img {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-bottom: 10px; } }
+
+@media screen and (max-width: 576px) {
+  .testimonial-title {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 1.2rem; }
+  .testimonial-subtitle {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.2rem; }
+  .testimonial-description {
+    font-size: 0.75rem;
+    padding: 0px 21px;
+    line-height: 1.45rem; } }
 
 .contact {
   background: url(../img/cases/contact-bg.jpg) no-repeat center/cover;
@@ -892,7 +943,8 @@ p {
   z-index: 2; }
   @media screen and (min-width: 320px) and (max-width: 768px) {
     .section-title {
-      font-size: 24px; } }
+      font-size: 24px;
+      margin-bottom: 30px; } }
 
 .section-title:after {
   content: "";
@@ -1050,9 +1102,14 @@ select {
   line-height: 17px;
   letter-spacing: 0;
   margin-top: 50px;
-  margin-left: 40%; }
+  margin-left: calc(50% - 50px); }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .resume-btn {
+      font-size: 12px;
+      margin-left: 0;
+      padding: 15px 10px; } }
   .resume-btn i {
-    padding-left: 15px; }
+    padding-left: 4px; }
 
 .about-photo {
   background: url(../img/me.jpg) no-repeat center/cover;
@@ -1071,5 +1128,8 @@ select {
   .trngl--gr {
     top: -5em;
     left: -18em; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .trngl {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */

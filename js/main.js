@@ -1,7 +1,7 @@
 $(document).ready(function(){
     new WOW().init();
 
-    //Main-nav
+  //Main-nav
   //On scroll functionality
   $(window).scroll( () => {
     var windowTop = $(window).scrollTop();
