@@ -340,6 +340,8 @@
       margin-bottom: 0px; }
     .wrap-name .offer-name {
       font-size: 1.875rem; }
+  .offer-info {
+    margin-bottom: 40px; }
   .offer-info .wrap-text {
     margin-top: 50%; }
     .offer-info .wrap-text .offer-dev {
@@ -388,6 +390,8 @@
 .wrap-social {
   margin-top: 30px;
   margin-left: 5px; }
+  .wrap-social a:hover {
+    text-decoration: none; }
   .wrap-social i {
     margin-right: 22px;
     font-size: 32px;
@@ -527,9 +531,6 @@ svg:not(:root) {
   padding: 45px 0 75px; }
   .services .services-title {
     margin-bottom: 70px; }
-    @media screen and (max-width: 768px) {
-      .services .services-title {
-        margin-bottom: 30px; } }
 
 .service-item {
   border: 2px solid rgba(55, 57, 64, 0.5);
@@ -826,6 +827,9 @@ footer {
     .footer-menu--item a {
       color: #373940;
       text-decoration: none; }
+      .footer-menu--item a:hover {
+        font-weight: 700;
+        color: #000; }
 
 .wrap-contacts {
   font-family: "Lato", sans-serif;

@@ -1,32 +1,34 @@
 .skills-title {
-  margin-bottom: 40px;
-}
+  margin-bottom: 40px; }
+
 .col-skill {
-  flex-direction: column;
-}
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .skill-wrap {
   position: relative;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .skills svg {
   display: block;
-  max-width: 150px;
-}
+  max-width: 150px; }
+
 svg:not(:root) {
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 .skill-progress {
   position: absolute;
   left: 50%;
   top: 50%;
   padding: 0px;
   margin: 0px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #333333;
-  font-size: 2rem;
-}
+  font-size: 2rem; }
 
 .skill-name {
   font-size: 1.3rem;
@@ -34,21 +36,17 @@ svg:not(:root) {
   margin-top: 20px;
   color: #000;
   font-family: "Lato", sans-serif;
-  font-weight: 700;
-}
+  font-weight: 700; }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .col-skill {
-    margin-bottom: 40px;
-  }
+    margin-bottom: 40px; }
   .skills svg {
     display: block;
-    max-width: 120px;
-  }
-  .skill-progress{
-    font-size: 1.5rem;
-  }
+    max-width: 120px; }
+  .skill-progress {
+    font-size: 1.5rem; }
   .skill-foundation {
-    display: block;
-  }
-}
+    display: block; } }
+
+/*# sourceMappingURL=_skills.css.map */

@@ -1,60 +1,22 @@
-/*---------- menu link animation ----------*/
-.nav-link {
-  display: block;
-  position: relative;
-  -webkit-transition: color .3s ease;
-  -o-transition: color .3s ease;
-  transition: color .3s ease; }
-  .nav-link:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: auto;
-    width: 0;
-    height: 3px;
-    z-index: 1; }
-  .nav-link:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: auto;
-    width: 0;
-    height: 3px;
-    z-index: 1;
-    background-color: #fff;
-    -webkit-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
-    -o-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
-    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s; }
-  .nav-link:after {
-    background-color: #f97a2e;
-    -webkit-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
-    -o-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
-    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1); }
-  .nav-link:hover {
-    text-decoration: none; }
-    .nav-link:hover:after, .nav-link:hover:before {
-      width: 100%;
-      left: 0; }
-
-/*---------- end of menu link animation ----------*/
 .header {
-  height: 160px;
+  position: absolute;
   width: 100%;
   left: 0;
   right: 0;
   z-index: 10;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s;
-  background: #2ea8ee; }
+  transition: all 0.3s; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .header .container {
+      max-width: 100%;
+      padding: 0px; } }
 
 .nav-link {
-  color: yellowgreen;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  color: #373940;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   text-transform: uppercase;
   text-decoration: none; }
 
@@ -67,14 +29,17 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 13px;
-  line-height: 23px;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .wrap-main-nav {
+      padding: 5px 0;
+      background: #fff; } }
 
 .main-nav {
-  width: 100vw;
-  height: 160px;
+  width: 100%;
+  margin-top: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -84,7 +49,7 @@
   transition: all 0.3s; }
 
 .header.navShadow {
-  background: #2ea8ee; }
+  background: #fff; }
 
 .header.navShadow .word-mark {
   opacity: 0; }
@@ -97,12 +62,23 @@
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  list-style: none; }
 
 .list-menu {
-  background: -webkit-linear-gradient(315deg, #b73afa 20%, #2362f4 100%);
-  background: -o-linear-gradient(315deg, #b73afa 20%, #2362f4 100%);
-  background: linear-gradient(135deg, #b73afa 20%, #2362f4 100%); }
+  background: #fff;
+  margin-bottom: 6rem; }
+  @media screen and (max-width: 1440px) {
+    .list-menu {
+      margin-bottom: 150px;
+      padding-left: 100px; } }
+  @media screen and (max-width: 1024px) {
+    .list-menu {
+      margin-bottom: 20px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .list-menu {
+      margin-bottom: 0px;
+      padding-left: 20px; } }
 
 .brand {
   -webkit-box-pack: end;
@@ -111,22 +87,34 @@
 
 .logo {
   cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    .logo {
+      margin-top: 20px;
+      padding-bottom: 10px;
+      margin-left: 20px; } }
 
 .menu {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: rotate(-90deg) translate(-375px, -316px);
-  -ms-transform: rotate(-90deg) translate(-375px, -316px);
-  transform: rotate(-90deg) translate(-375px, -316px); }
+  -webkit-transform: rotate(-90deg) translate(-375px, -370px);
+  -ms-transform: rotate(-90deg) translate(-375px, -370px);
+  transform: rotate(-90deg) translate(-375px, -370px); }
+  @media screen and (max-width: 1440px) {
+    .menu {
+      top: -80px;
+      left: 40px; } }
 
 .list-menu-item {
-  margin-left: 15px; }
+  margin-left: 10px; }
+  @media screen and (max-width: 1440px) {
+    .list-menu-item .nav-link {
+      font-size: 0.7rem; } }
 
 .menu-toggle {
   width: 55px;
   height: 55px;
-  background: #9045f8;
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,7 +126,8 @@
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
-  display: none; }
+  display: none;
+  margin-right: 10px; }
 
 .menu-toggle:hover .bar {
   width: 25px; }
@@ -164,7 +153,7 @@
 .bar {
   width: 25px;
   height: 2px;
-  background: #fff;
+  background: #000;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
@@ -178,6 +167,7 @@
 
 @media screen and (max-width: 992px) {
   .main-nav {
+    margin-top: 5px;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr; }
   .list-menu-right {
@@ -186,6 +176,16 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .closeMenu {
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    background: #f0b163;
+    color: #fff;
+    -webkit-box-shadow: 4px 4px 15px rgba(55, 57, 64, 0.3);
+    box-shadow: 4px 4px 15px rgba(55, 57, 64, 0.3); }
   .list-menu {
     display: inline-block;
     width: 100%;
@@ -193,30 +193,31 @@
     left: 0;
     right: 0;
     z-index: 1;
-    background: -webkit-linear-gradient(315deg, #b73afa 20%, #2362f4 100%);
-    background: -o-linear-gradient(315deg, #b73afa 20%, #2362f4 100%);
-    background: linear-gradient(135deg, #b73afa 20%, #2362f4 100%);
+    background: #fff;
     position: fixed;
-    top: 160px;
+    top: 0px;
     -webkit-box-shadow: 0 5px 30px -4px rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 30px -4px rgba(0, 0, 0, 0.2);
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }
   .list-menu.showMenu {
+    padding-top: 100px;
     height: 100vh; }
     .list-menu.showMenu .list-menu-item {
+      text-align: left;
+      padding-left: 10px;
       opacity: 1;
       visibility: visible; }
   .list-menu-item {
     text-align: center;
     margin-left: 0;
-    padding: 15px 0;
+    padding: 16px 0;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all 0.3s 0.1s;
-    -o-transition: all 0.3s 0.1s;
-    transition: all 0.3s 0.1s; }
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
   .nav-link:hover:after, .nav-link:hover:before {
     display: none; }
   .header {
@@ -238,5 +239,50 @@
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2; } }
+
+/*---------- menu link animation ----------*/
+.nav-link {
+  display: block;
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  font-weight: 700;
+  color: #787878; }
+  .nav-link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: 0;
+    height: 7px;
+    z-index: 1; }
+  .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: 0;
+    height: 7px;
+    z-index: 1;
+    background-color: #fff;
+    -webkit-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
+    -o-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
+    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s; }
+  .nav-link:after {
+    background-color: #f0b163;
+    -webkit-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+    -o-transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1); }
+  .nav-link:hover {
+    text-decoration: none;
+    color: #000; }
+    .nav-link:hover:after, .nav-link:hover:before {
+      width: 100%;
+      left: 0; }
+
+/*---------- end of menu link animation ----------*/
 
 /*# sourceMappingURL=_menu.css.map */

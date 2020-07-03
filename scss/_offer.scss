@@ -61,6 +61,9 @@
       font-size: 1.875rem;
     }
   }
+  .offer-info {
+    margin-bottom: 40px;
+  }
   .offer-info .wrap-text {
     margin-top: 50%;
     .offer-dev {
@@ -120,6 +123,9 @@
 .wrap-social {
   margin-top: 30px;
   margin-left: 5px;
+  a:hover{
+    text-decoration: none;
+  }
   i {
     margin-right: 22px;
     font-size: 32px;
